@@ -1,0 +1,12 @@
+{
+  "categories": {
+    "Documents": [".pdf", ".docx", ".xlsx", ".pptx", ".txt", ".csv"],
+    "Installers": [".exe", ".msi"],
+    "Images": [".jpg", ".jpeg", ".png", ".gif", ".svg"],
+    "Archives": [".zip", ".rar", ".7z"],
+    "Media": [".mp4", ".mp3", ".wav"]
+  },
+  "fallback_category": "Other",
+  "skip_names": ["desktop.ini", "thumbs.db"],
+  "skip_extensions": [".crdownload", ".part", ".tmp"]
+}
