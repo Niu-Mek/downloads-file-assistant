@@ -78,18 +78,27 @@ Extensions are matched case-insensitively. Only files directly inside the folder
 - No file is ever deleted or overwritten.
 - Every move is logged and can be undone.
 
+## Running the tests
+
+```
+python -m unittest discover -s tests
+```
+
+The tests use the standard library's `unittest` and run in temporary folders, so they never touch your real Downloads or the `logs\` folder.
+
 ## Project layout
 
 ```
-file_assistant.py   # command-line entry point
-organiser.py        # scan, plan, move and undo logic
-config.json         # category-to-extension rules
-logs\               # move logs used by undo (not committed)
-PLAN.md             # design plan and approved decisions
+file_assistant.py        # command-line entry point
+organiser.py             # scan, plan, move and undo logic
+config.json              # category-to-extension rules
+tests\test_organiser.py  # automated tests
+logs\                    # move logs used by undo (not committed)
+PLAN.md                  # design plan and approved decisions
 ```
 
 ## Status
 
-Version 1 is in progress. Scan, organise, apply and undo are working. Still to come: an automated test suite and a full rehearsal on a copy of Downloads.
+Version 1 is complete: scan, organise, apply and undo all work, are covered by automated tests, and have been rehearsed end to end on a copy of a real Downloads folder.
 
 Ideas for later versions include sorting by date, finding duplicates by content hash, watching the folder for new downloads, and a simple GUI or scheduled task.
